@@ -156,7 +156,7 @@
                         if (incomingZoneOffset !== currentZoneOffset) {
                             timeZoneIndicator = moment().tz(options.timeZone).format('Z');
                             dateWithTimeZoneInfo = moment(d, parseFormats, options.useStrict).format('YYYY-MM-DD[T]HH:mm:ss') + timeZoneIndicator;
-                            returnMoment = moment(dateWithTimeZoneInfo, parseFormats, options.useStrict).tz(options.timeZone);
+                            returnMoment = moment(dateWithTimeZoneInfo, 'YYYY-MM-DD[T]HH:mm:ssZ', options.useStrict).tz(options.timeZone);
                         } else {
                             returnMoment = moment(d, parseFormats, options.useStrict).tz(options.timeZone);
                         }
